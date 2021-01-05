@@ -14,7 +14,7 @@ object Versions {
     const val appcompat = "1.2.0"
     const val coreKtx = "1.3.2"
     const val constraintlayout = "2.0.4"
-    const val paging = "3.0.0-alpha02"
+    const val paging = "3.0.0-alpha11"
     const val timber = "4.7.1"
     const val kotlin = "1.4.10"
     const val kotlinCoroutinesCore = "1.3.7"
@@ -37,6 +37,8 @@ object Versions {
     const val hitViewModule = "1.0.0-alpha01"
     const val appStartup = "1.0.0"
     const val material = "1.2.1"
+    const val okgo = "3.0.4"
+    const val okrx2 = "2.0.2"
 }
 
 object AndroidX {
@@ -44,7 +46,7 @@ object AndroidX {
     const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
     const val constraintlayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
-    const val pagingRuntime = "androidx.paging:paging-runtime:${Versions.paging}"
+    const val pagingRuntime = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
 
     const val workRuntime = "androidx.work:work-runtime:${Versions.work}"
     const val workTesting = "androidx.work:work-testing:${Versions.work}"
@@ -124,5 +126,10 @@ object Depend {
     const val jDatabinding = "com.hi-dhl:jdatabinding:${Versions.jDatabinding}"
     const val progressview = "com.hi-dhl:progressview:${Versions.progressview}"
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
+}
+
+object OkGo {
+    const val okgo =  "com.lzy.net:okgo:${Versions.okgo}"
+    const val okrx2 =  "com.lzy.net:okrx2:${Versions.okrx2}"
 }
 

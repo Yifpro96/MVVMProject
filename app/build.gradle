@@ -4,6 +4,8 @@ import com.aoxing.mymvvm.BuildConfig
 import com.aoxing.mymvvm.Depend
 import com.aoxing.mymvvm.Koin
 import com.aoxing.mymvvm.Kt
+import com.aoxing.mymvvm.OkGo
+import com.aoxing.mymvvm.Retrofit
 
 plugins {
     id 'com.android.application'
@@ -49,13 +51,16 @@ dependencies {
     implementation(AndroidX.appcompat)
     implementation(Android.material)
     implementation(AndroidX.constraintlayout)
+    implementation(AndroidX.pagingRuntime)
     implementation(Depend.junit)
     implementation(Depend.androidTestJunit)
     implementation(Depend.espressoCore)
-
     implementation(Koin.core)
     implementation(Koin.android)
     implementation(Koin.scope)
     implementation(Koin.viewmodel)
     implementation(Koin.ext)
+    implementation(Retrofit.runtime)
+    implementation(Retrofit.gson)
+    implementation(OkGo.okgo)
 }
