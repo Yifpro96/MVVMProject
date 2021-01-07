@@ -37,8 +37,7 @@ object Versions {
     const val hitViewModule = "1.0.0-alpha01"
     const val appStartup = "1.0.0"
     const val material = "1.2.1"
-    const val okgo = "3.0.4"
-    const val okrx2 = "2.0.2"
+    const val okhttp = "4.9.0"
 }
 
 object AndroidX {
@@ -128,8 +127,8 @@ object Depend {
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
 
-object OkGo {
-    const val okgo =  "com.lzy.net:okgo:${Versions.okgo}"
-    const val okrx2 =  "com.lzy.net:okrx2:${Versions.okrx2}"
+object Okhttp {
+    const val runtime =  "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val logging =  "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 }
 

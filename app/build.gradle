@@ -4,7 +4,7 @@ import com.aoxing.mymvvm.BuildConfig
 import com.aoxing.mymvvm.Depend
 import com.aoxing.mymvvm.Koin
 import com.aoxing.mymvvm.Kt
-import com.aoxing.mymvvm.OkGo
+import com.aoxing.mymvvm.Okhttp
 import com.aoxing.mymvvm.Retrofit
 
 plugins {
@@ -23,6 +23,7 @@ android {
         targetSdkVersion BuildConfig.targetSdkVersion
         versionCode BuildConfig.versionCode
         versionName BuildConfig.versionName
+        multiDexEnabled true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -46,6 +47,8 @@ android {
 }
 
 dependencies {
+    implementation 'com.orhanobut:logger:2.2.0'
+    implementation 'com.android.support:multidex:1.0.3'
     implementation(Kt.stdlibJdk8)
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appcompat)
@@ -55,12 +58,16 @@ dependencies {
     implementation(Depend.junit)
     implementation(Depend.androidTestJunit)
     implementation(Depend.espressoCore)
+
+    //依赖注入
     implementation(Koin.core)
     implementation(Koin.android)
     implementation(Koin.scope)
     implementation(Koin.viewmodel)
     implementation(Koin.ext)
+
+    //网络
     implementation(Retrofit.runtime)
     implementation(Retrofit.gson)
-    implementation(OkGo.okgo)
+    implementation(Okhttp.logging)
 }
