@@ -1,6 +1,5 @@
 package com.aoxing.mymvvm.di
 
-import androidx.paging.PagingConfig
 import com.aoxing.mymvvm.network.ApiService
 import com.aoxing.mymvvm.network.LoggingInterceptor
 import okhttp3.OkHttpClient
@@ -23,7 +22,7 @@ val networkModule = module {
     single {
         Retrofit.Builder()
             .client(get())
-            .baseUrl("https://www.wanandroid.com/")
+            .baseUrl(ApiService.baseUrl)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }

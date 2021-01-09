@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/page_1">
+
+    <fragment
+        android:id="@+id/page_1"
+        android:name="com.aoxing.mymvvm.ui.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/page_2"
+        android:name="com.aoxing.mymvvm.ui.SecondFragment"
+        tools:layout="@layout/fragment_my" />
+
+    <fragment
+        android:id="@+id/page_3"
+        android:name="com.aoxing.mymvvm.ui.MyFragment"
+        tools:layout="@layout/fragment_my" />
+
+</navigation>

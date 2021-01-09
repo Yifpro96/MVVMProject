@@ -7,7 +7,7 @@ import retrofit2.http.Path
 
 interface ApiService {
     companion object{
-        const val baseUrl = ""
+        const val baseUrl = "https://www.wanandroid.com/"
     }
 
     @GET("article/list/{page}/json")

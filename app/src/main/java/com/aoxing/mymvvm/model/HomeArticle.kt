@@ -39,7 +39,7 @@ data class HomeArticle(
         var shareUser: String = "",
         var superChapterId: Int = 0,
         var superChapterName: String = "",
-        var tags: List<String> = listOf(),
+        var tags: List<Tag> = listOf(),
         var title: String = "",
         var type: Int = 0,
         var userId: Int = 0,
@@ -51,9 +51,14 @@ data class HomeArticle(
                 override fun areItemsTheSame(oldItem: Data, newItem: Data) =
                     oldItem.id == newItem.id
 
-                override fun areContentsTheSame(oldItem: Data, newItem: Data)=oldItem==newItem
+                override fun areContentsTheSame(oldItem: Data, newItem: Data) = oldItem == newItem
 
             }
         }
     }
+
+    data class Tag(
+        var name: String = "",
+        var url: String = ""
+    )
 }

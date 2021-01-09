@@ -10,6 +10,7 @@ import com.aoxing.mymvvm.Retrofit
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'koin'
 }
@@ -58,6 +59,7 @@ dependencies {
     implementation(Depend.junit)
     implementation(Depend.androidTestJunit)
     implementation(Depend.espressoCore)
+    implementation(Depend.jDatabinding)
 
     //依赖注入
     implementation(Koin.core)
@@ -70,4 +72,6 @@ dependencies {
     implementation(Retrofit.runtime)
     implementation(Retrofit.gson)
     implementation(Okhttp.logging)
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
 }
