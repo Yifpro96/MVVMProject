@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.statusBarColor = getColor(R.color.colorPrimaryDark)
         setContentView(R.layout.activity_main)
         navBottomBar.setupWithNavController(findNavController(R.id.fragmentNavHost))
     }

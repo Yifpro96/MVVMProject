@@ -1,6 +1,7 @@
 package com.aoxing.mymvvm
 
 import android.app.Application
+import android.content.Context
 import com.aoxing.mymvvm.di.networkModule
 import com.aoxing.mymvvm.di.repositoryModule
 import com.aoxing.mymvvm.di.viewModelModule
@@ -10,11 +11,18 @@ import com.orhanobut.logger.Logger
 import com.orhanobut.logger.PrettyFormatStrategy
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
-
+import kotlin.properties.Delegates
 
 class YifApp : Application() {
+
+    companion object {
+        var context: Context by Delegates.notNull()
+            private set
+    }
+
     override fun onCreate() {
         super.onCreate()
+        context = applicationContext
         startKoin {
             androidContext(this@YifApp)
             modules(listOf(networkModule, viewModelModule, repositoryModule))

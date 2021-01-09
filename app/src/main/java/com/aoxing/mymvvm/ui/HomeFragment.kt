@@ -5,7 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.databinding.adapters.AbsListViewBindingAdapter
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.aoxing.mymvvm.MainAdapter
 import com.aoxing.mymvvm.MainViewModel
 import com.aoxing.mymvvm.R

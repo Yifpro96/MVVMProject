@@ -20,12 +20,6 @@
         app:navGraph="@navigation/nav_graph"
         tools:ignore="FragmentTagUsage" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/purple_200"
-        app:layout_constraintBottom_toTopOf="@+id/navBottomBar" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navBottomBar"
         android:layout_width="match_parent"

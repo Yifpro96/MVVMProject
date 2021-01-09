@@ -44,12 +44,17 @@ android {
     }
     buildFeatures {
         dataBinding = true
+        viewBinding = true
     }
 }
 
 dependencies {
-    implementation 'com.orhanobut:logger:2.2.0'
-    implementation 'com.android.support:multidex:1.0.3'
+    implementation('com.orhanobut:logger:2.2.0')
+    implementation('com.android.support:multidex:1.0.3')
+    implementation('androidx.navigation:navigation-fragment-ktx:2.3.2')
+    implementation('androidx.navigation:navigation-ui-ktx:2.3.2')
+    implementation('io.coil-kt:coil:1.1.0')
+    implementation('me.jessyan:autosize:1.1.2')
     implementation(Kt.stdlibJdk8)
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appcompat)
@@ -72,6 +77,4 @@ dependencies {
     implementation(Retrofit.runtime)
     implementation(Retrofit.gson)
     implementation(Okhttp.logging)
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
 }
