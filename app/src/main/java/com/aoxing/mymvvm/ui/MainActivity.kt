@@ -2,6 +2,7 @@ package com.aoxing.mymvvm.ui
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController

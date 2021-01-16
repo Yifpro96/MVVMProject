@@ -2,6 +2,12 @@ package com.aoxing.mymvvm.model
 
 import androidx.recyclerview.widget.DiffUtil
 
+data class TopArticle(
+    var data: List<HomeArticle.Data> = listOf(),
+    var errorCode: String = "",
+    var errorMsg: String = ""
+)
+
 data class HomeArticle(
     var curPage: Int = 0,
     var datas: List<Data> = listOf(),

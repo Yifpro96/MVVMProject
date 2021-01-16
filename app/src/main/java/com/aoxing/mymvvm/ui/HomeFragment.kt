@@ -1,13 +1,7 @@
 package com.aoxing.mymvvm.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.adapters.AbsListViewBindingAdapter
-import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.RecyclerView
 import com.aoxing.mymvvm.MainAdapter
 import com.aoxing.mymvvm.MainViewModel
 import com.aoxing.mymvvm.R
@@ -29,7 +23,7 @@ class HomeFragment : DataBindingFragment(R.layout.fragment_home) {
             mainViewModel = mViewModel
             lifecycleOwner = this@HomeFragment
         }
-        mViewModel.fetchHomeArticle().observe(viewLifecycleOwner) {
+        mViewModel.fetchArticles().observe(viewLifecycleOwner) {
             mMainAdapter.submitData(lifecycle, it)
         }
     }
