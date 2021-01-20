@@ -13,10 +13,10 @@ import kotlinx.coroutines.flow.flow
 
 class HomeRepository(private val api: ApiService) {
 
-    fun fetchTopArticle(): Flow<YifResult<TopArticle>> {
+    fun fetchTopArticle(): Flow<YifResult<HomeArticle.Data?>> {
         return flow {
             try {
-                emit(YifResult.Success(api.fetchTopArticle()))
+                emit(YifResult.Success(api.fetchTopArticle().data))
             } catch (e: Exception) {
                 emit(YifResult.Failure(e))
             }
@@ -32,7 +32,7 @@ class HomeArticlePagingSource(val api: ApiService) : PagingSource<Int, HomeArtic
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, HomeArticle.Data> {
         return try {
             val page = params.key ?: Default_Page_Index
-            with(api.fetchArticles(page)) {
+            with(api.fetchArticles(page).data ?: HomeArticle()) {
                 LoadResult.Page(
                     data = datas,
                     prevKey = if (page == Default_Page_Index) null else page - 1,

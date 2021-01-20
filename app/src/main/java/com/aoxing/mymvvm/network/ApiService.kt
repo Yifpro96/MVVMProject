@@ -2,6 +2,7 @@ package com.aoxing.mymvvm.network
 
 import com.aoxing.mymvvm.model.HomeArticle
 import com.aoxing.mymvvm.model.TopArticle
+import com.aoxing.mymvvm.model.YifResp
 import com.aoxing.mymvvm.model.YifResult
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -12,8 +13,8 @@ interface ApiService {
     }
 
     @GET("article/top/json")
-    suspend fun fetchTopArticle(): TopArticle
+    suspend fun fetchTopArticle(): YifResp<HomeArticle.Data>
 
     @GET("article/list/{page}/json")
-    suspend fun fetchArticles(@Path("page") page: Int = 0): YifResult<HomeArticle>
+    suspend fun fetchArticles(@Path("page") page: Int = 0): YifResp<HomeArticle>
 }
