@@ -36,39 +36,13 @@ object Versions {
     const val hit = "2.28-alpha"
     const val hitViewModule = "1.0.0-alpha01"
     const val appStartup = "1.0.0"
+    const val navigation = "2.3.2"
     const val material = "1.2.1"
     const val okhttp = "4.9.0"
-}
-
-object AndroidX {
-    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
-    const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
-    const val constraintlayout =
-        "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
-    const val pagingRuntime = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
-
-    const val workRuntime = "androidx.work:work-runtime:${Versions.work}"
-    const val workTesting = "androidx.work:work-testing:${Versions.work}"
-    const val cardview = "androidx.cardview:cardview:${Versions.cardview}"
-    const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
-    const val swiperefreshlayout =
-        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swiperefreshlayout}"
-    const val appStartup = "androidx.startup:startup-runtime:${Versions.appStartup}"
-}
-
-object Android {
-    const val material = "com.google.android.material:material:${Versions.material}"
-}
-
-object Hilt {
-    const val daggerRuntime = "com.google.dagger:hilt-android:${Versions.hit}"
-    const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hit}"
-    const val viewModule = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hitViewModule}"
-    const val compiler = "androidx.hilt:hilt-compiler:${Versions.hitViewModule}"
-}
-
-object Coil {
-    const val runtime = "io.coil-kt:coil:${Versions.runtime}"
+    const val autoSize = "1.1.2"
+    const val logger = "2.2.0"
+    const val banner = "3.0.0"
+    const val multidex = "1.0.3"
 }
 
 object Room {
@@ -79,10 +53,16 @@ object Room {
     const val testing = "androidx.room:room-testing:${Versions.room}"
 }
 
-object Fragment {
-    const val runtime = "androidx.fragment:fragment:${Versions.fragment}"
-    const val runtimeKtx = "androidx.fragment:fragment-ktx:${Versions.fragment}"
-    const val testing = "androidx.fragment:fragment-testing:${Versions.fragment}"
+object Retrofit {
+    const val runtime = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+    const val mock = "com.squareup.retrofit2:retrofit-mock:${Versions.retrofit}"
+    const val logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpLogging}"
+}
+
+object Okhttp {
+    const val runtime = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
 }
 
 object Kt {
@@ -96,6 +76,14 @@ object Kt {
     const val plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 }
 
+object Multidex {
+    const val runtime = "com.android.support:multidex:${Versions.multidex}"
+}
+
+object Logger {
+    const val runtime = "com.orhanobut:logger:${Versions.logger}"
+}
+
 object Koin {
     const val core = "org.koin:koin-core:${Versions.koin}"
     const val android = "org.koin:koin-android:${Versions.koin}"
@@ -104,18 +92,36 @@ object Koin {
     const val ext = "org.koin:koin-androidx-ext:${Versions.koin}"
 }
 
+object Hilt {
+    const val daggerRuntime = "com.google.dagger:hilt-android:${Versions.hit}"
+    const val daggerCompiler = "com.google.dagger:hilt-android-compiler:${Versions.hit}"
+    const val viewModule = "androidx.hilt:hilt-lifecycle-viewmodel:${Versions.hitViewModule}"
+    const val compiler = "androidx.hilt:hilt-compiler:${Versions.hitViewModule}"
+}
+
+object Fragment {
+    const val runtime = "androidx.fragment:fragment:${Versions.fragment}"
+    const val runtimeKtx = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+    const val testing = "androidx.fragment:fragment-testing:${Versions.fragment}"
+}
+
+object Coil {
+    const val runtime = "io.coil-kt:coil:${Versions.runtime}"
+}
+
+object Banner {
+    const val runtime = "cn.bingoogolapple:bga-banner:${Versions.banner}@aar"
+}
+
+object AutoSize {
+    const val runtime = "me.jessyan:autosize:${Versions.autoSize}"
+}
+
 object Anko {
     const val common = "org.jetbrains.anko:anko-common:${Versions.anko}"
     const val sqlite = "org.jetbrains.anko:anko-sqlite:${Versions.anko}"
     const val coroutines = "org.jetbrains.anko:anko-coroutines:${Versions.anko}"
     const val design = "org.jetbrains.anko:anko-design:${Versions.anko}" // For SnackBars
-}
-
-object Retrofit {
-    const val runtime = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
-    const val gson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
-    const val mock = "com.squareup.retrofit2:retrofit-mock:${Versions.retrofit}"
-    const val logging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpLogging}"
 }
 
 object Depend {
@@ -127,8 +133,25 @@ object Depend {
     const val timber = "com.jakewharton.timber:timber:${Versions.timber}"
 }
 
-object Okhttp {
-    const val runtime =  "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
-    const val logging =  "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+object AndroidX {
+    const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
+    const val appcompat = "androidx.appcompat:appcompat:${Versions.appcompat}"
+    const val constraintlayout =
+        "androidx.constraintlayout:constraintlayout:${Versions.constraintlayout}"
+    const val pagingRuntime = "androidx.paging:paging-runtime-ktx:${Versions.paging}"
+    const val workRuntime = "androidx.work:work-runtime:${Versions.work}"
+    const val workTesting = "androidx.work:work-testing:${Versions.work}"
+    const val cardview = "androidx.cardview:cardview:${Versions.cardview}"
+    const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
+    const val swiperefreshlayout =
+        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swiperefreshlayout}"
+    const val appStartup = "androidx.startup:startup-runtime:${Versions.appStartup}"
+    const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
+}
+
+object Android {
+    const val material = "com.google.android.material:material:${Versions.material}"
 }
 

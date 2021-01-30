@@ -1,4 +1,4 @@
-package com.aoxing.mymvvm
+package com.aoxing.mymvvm.common
 
 import android.app.Application
 import android.content.Context

@@ -1,12 +1,13 @@
-package com.aoxing.mymvvm.ui
+package com.aoxing.mymvvm.ui.binding
 
 import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import coil.load
 import coil.transform.RoundedCornersTransformation
 import com.aoxing.mymvvm.R
-import com.aoxing.mymvvm.Rounded_Corner
+import com.aoxing.mymvvm.common.Rounded_Corner
 
 @BindingAdapter("bindingSrc")
 fun bindingSrc(view: ImageView, url: String) {
@@ -31,4 +32,9 @@ fun bindingSrc(view: ImageView, url: String) {
             }
         }
     }
+}
+
+@BindingAdapter("bindingLoading")
+fun bindingLoading(swipe: SwipeRefreshLayout, isLoading: Boolean) {
+    swipe.isRefreshing = isLoading
 }

@@ -18,6 +18,9 @@ data class HomeArticle(
     var total: Int = 0
 ) {
     data class Data(
+        var top: Int = 0,
+        var curPage: Int = 0,
+        var imagePath: String = "",
         var apkLink: String = "",
         var audit: Int = 0,
         var author: String = "",

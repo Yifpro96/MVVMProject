@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment
 import com.aoxing.mymvvm.R
 
 class MyFragment : Fragment() {
+
+    companion object {
+        fun getInstance(): MyFragment = MyFragment()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

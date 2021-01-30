@@ -1,4 +1,4 @@
-package com.aoxing.mymvvm.ui
+package com.aoxing.mymvvm.common
 
 import android.os.Bundle
 import android.view.View

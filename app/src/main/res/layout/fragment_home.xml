@@ -6,17 +6,23 @@
     <data>
 
         <variable
-            name="mainViewModel"
-            type="com.aoxing.mymvvm.MainViewModel" />
+            name="viewModel"
+            type="com.aoxing.mymvvm.ui.home.HomeViewModel" />
     </data>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        bindingLoading="@{viewModel.loading}"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:listitem="@layout/item_home_article" />
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            tools:listitem="@layout/item_home_article" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 </layout>

@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">MyMVVM</string>
     <string name="home">首页</string>
+    <string name="retry">重试</string>
+    <string name="top_tip">置顶</string>
+    <string name="new_fresh">新</string>
 </resources>

@@ -8,6 +8,11 @@ import androidx.fragment.app.Fragment
 import com.aoxing.mymvvm.R
 
 class SecondFragment : Fragment() {
+
+    companion object {
+        fun getInstance(): SecondFragment = SecondFragment()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

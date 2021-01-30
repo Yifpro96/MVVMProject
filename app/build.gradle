@@ -1,11 +1,17 @@
 import com.aoxing.mymvvm.Android
 import com.aoxing.mymvvm.AndroidX
+import com.aoxing.mymvvm.Anko
+import com.aoxing.mymvvm.AutoSize
 import com.aoxing.mymvvm.BuildConfig
+import com.aoxing.mymvvm.Coil
 import com.aoxing.mymvvm.Depend
 import com.aoxing.mymvvm.Koin
 import com.aoxing.mymvvm.Kt
 import com.aoxing.mymvvm.Okhttp
 import com.aoxing.mymvvm.Retrofit
+import com.aoxing.mymvvm.Logger
+import com.aoxing.mymvvm.Banner
+import com.aoxing.mymvvm.Multidex
 
 plugins {
     id 'com.android.application'
@@ -49,31 +55,46 @@ android {
 }
 
 dependencies {
-    implementation('com.orhanobut:logger:2.2.0')
-    implementation('com.android.support:multidex:1.0.3')
-    implementation('androidx.navigation:navigation-fragment-ktx:2.3.2')
-    implementation('androidx.navigation:navigation-ui-ktx:2.3.2')
-    implementation('io.coil-kt:coil:1.1.0')
-    implementation('me.jessyan:autosize:1.1.2')
     implementation(Kt.stdlibJdk8)
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appcompat)
     implementation(Android.material)
     implementation(AndroidX.constraintlayout)
     implementation(AndroidX.pagingRuntime)
+    implementation(AndroidX.swiperefreshlayout)
+    implementation(AndroidX.navigationUi)
+    implementation(AndroidX.navigationFragment)
     implementation(Depend.junit)
     implementation(Depend.androidTestJunit)
     implementation(Depend.espressoCore)
     implementation(Depend.jDatabinding)
 
-    //依赖注入
+    //banner
+    implementation(Banner.runtime)
+
+    //auto size
+    implementation(AutoSize.runtime)
+
+    //anko
+    implementation(Anko.common)
+
+    //coil
+    implementation(Coil.runtime)
+
+    //logger
+    implementation(Logger.runtime)
+
+    //multidex
+    implementation(Multidex.runtime)
+
+    //koin
     implementation(Koin.core)
     implementation(Koin.android)
     implementation(Koin.scope)
     implementation(Koin.viewmodel)
     implementation(Koin.ext)
 
-    //网络
+    //network
     implementation(Retrofit.runtime)
     implementation(Retrofit.gson)
     implementation(Okhttp.logging)
