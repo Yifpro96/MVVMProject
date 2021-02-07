@@ -4,10 +4,11 @@
 
     <data>
 
-
         <import type="android.text.Html" />
 
         <import type="android.view.View" />
+
+        <import type="com.aoxing.mymvvm.model.HomeArticle.Tag" />
 
         <variable
             name="article"
@@ -58,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:background="@drawable/bg_tag"
-                android:text="@{article.tags.empty ? ' ' : article.tags.get(0).component1()}"
+                android:text='@{article.tags.empty ? "" : article.tags[0].name}'
                 android:textColor="@color/colorPrimary"
                 android:textSize="12dp"
                 android:visibility="@{article.tags.empty ? View.GONE : View.VISIBLE}"
