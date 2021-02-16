@@ -143,8 +143,6 @@ object AndroidX {
     const val workTesting = "androidx.work:work-testing:${Versions.work}"
     const val cardview = "androidx.cardview:cardview:${Versions.cardview}"
     const val recyclerview = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
-    const val swiperefreshlayout =
-        "androidx.swiperefreshlayout:swiperefreshlayout:${Versions.swiperefreshlayout}"
     const val appStartup = "androidx.startup:startup-runtime:${Versions.appStartup}"
     const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
     const val navigationFragment =

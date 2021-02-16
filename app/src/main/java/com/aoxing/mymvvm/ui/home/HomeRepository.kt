@@ -6,12 +6,11 @@ import androidx.paging.PagingSource
 import com.aoxing.mymvvm.common.Default_Page_Index
 import com.aoxing.mymvvm.common.pageConfig
 import com.aoxing.mymvvm.model.HomeArticle
-import com.aoxing.mymvvm.model.YifResult
 import com.aoxing.mymvvm.network.ApiService
+import com.orhanobut.logger.Logger
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.withContext
 
 class HomeRepository(val api: ApiService) {
@@ -20,29 +19,6 @@ class HomeRepository(val api: ApiService) {
         return Pager(config = pageConfig) { HomeArticlePagingSource(api) }.flow
     }
 
-    fun fetchArticles(): Flow<PagingData<HomeArticle.Data>> {
-        return Pager(config = pageConfig) { HomeArticlePagingSource(api) }.flow
-    }
-
-    fun fetchTopArticle(): Flow<YifResult<List<HomeArticle.Data>>> {
-        return flow {
-            try {
-                emit(YifResult.Success(api.fetchTopArticle().data ?: listOf()))
-            } catch (e: Exception) {
-                emit(YifResult.Failure(e))
-            }
-        }
-    }
-
-    fun fetchBanner(): Flow<YifResult<List<HomeArticle.Data>>> {
-        return flow {
-            try {
-                emit(YifResult.Success(api.fetchBanner().data ?: listOf()))
-            } catch (e: Exception) {
-                emit(YifResult.Failure(e))
-            }
-        }
-    }
 }
 
 class HomeArticlePagingSource(val api: ApiService) : PagingSource<Int, HomeArticle.Data>() {

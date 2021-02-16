@@ -22,7 +22,7 @@ fun getError(state: CombinedLoadStates): LoadState.Error?{
 }
 
 fun dp2px(dpValue: Float): Int {
-    return dp2px(YifApp.context, dpValue)
+    return dp2px(App.context, dpValue)
 }
 
 fun dp2px(context: Context, dpValue: Float): Int {

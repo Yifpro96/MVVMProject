@@ -55,13 +55,15 @@ android {
 }
 
 dependencies {
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.3'
+    implementation  'com.scwang.smart:refresh-header-material:2.0.1'
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'
     implementation(Kt.stdlibJdk8)
     implementation(AndroidX.coreKtx)
     implementation(AndroidX.appcompat)
     implementation(Android.material)
     implementation(AndroidX.constraintlayout)
     implementation(AndroidX.pagingRuntime)
-    implementation(AndroidX.swiperefreshlayout)
     implementation(AndroidX.navigationUi)
     implementation(AndroidX.navigationFragment)
     implementation(Depend.junit)

@@ -10,6 +10,9 @@ interface ApiService {
         const val baseUrl = "https://www.wanandroid.com/"
     }
 
+    @GET("user_article/list/{page}/json")
+    suspend fun fetchSquares(@Path("page") page: Int = 0): HttpResp<HomeArticle>
+
     @GET("article/list/{page}/json")
     suspend fun fetchArticles(@Path("page") page: Int = 0): HttpResp<HomeArticle>
 

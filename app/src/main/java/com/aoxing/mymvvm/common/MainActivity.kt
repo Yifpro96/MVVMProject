@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import com.aoxing.mymvvm.R
 import com.aoxing.mymvvm.ui.MyFragment
-import com.aoxing.mymvvm.ui.SecondFragment
+import com.aoxing.mymvvm.ui.square.SquareFragment
 import com.aoxing.mymvvm.ui.home.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private val Fragment_Survey = 2
 
     private var mHomeFragment: HomeFragment? = null
-    private var mSecondFragment: SecondFragment? = null
+    private var mSquareFragment: SquareFragment? = null
     private var mMyFragment: MyFragment? = null
     private var mIndex = 0
 
@@ -58,11 +58,11 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             }
             Fragment_App -> {
                 toolbar.title = "广场"
-                if (mSecondFragment == null) {
-                    mSecondFragment = SecondFragment.getInstance()
-                    transaction.add(R.id.container, mSecondFragment!!, "")
+                if (mSquareFragment == null) {
+                    mSquareFragment = SquareFragment.getInstance()
+                    transaction.add(R.id.container, mSquareFragment!!, "")
                 }else{
-                    transaction.show(mSecondFragment!!)
+                    transaction.show(mSquareFragment!!)
                 }
             }
             Fragment_Survey -> {
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     }
 
     private fun hideFragment(transaction: FragmentTransaction) {
-        val page = arrayOf(mHomeFragment, mSecondFragment, mMyFragment)
+        val page = arrayOf(mHomeFragment, mSquareFragment, mMyFragment)
         page.forEach { p -> p?.let { transaction.hide(it) } }
     }
 }

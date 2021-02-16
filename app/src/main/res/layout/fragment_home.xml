@@ -10,11 +10,11 @@
             type="com.aoxing.mymvvm.ui.home.HomeViewModel" />
     </data>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
-        bindingLoading="@{viewModel.loading}"
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:srlEnableLoadMore="false">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
@@ -23,6 +23,6 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
             tools:listitem="@layout/item_home_article" />
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
 </layout>

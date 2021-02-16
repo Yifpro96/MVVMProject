@@ -12,12 +12,12 @@
 
     <fragment
         android:id="@+id/page_2"
-        android:name="com.aoxing.mymvvm.ui.SecondFragment"
-        tools:layout="@layout/fragment_my" />
+        android:name="com.aoxing.mymvvm.ui.square.SquareFragment"
+        tools:layout="@layout/fragment_square" />
 
     <fragment
         android:id="@+id/page_3"
         android:name="com.aoxing.mymvvm.ui.MyFragment"
-        tools:layout="@layout/fragment_my" />
+        tools:layout="@layout/fragment_square" />
 
 </navigation>

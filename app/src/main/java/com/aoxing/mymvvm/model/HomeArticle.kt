@@ -3,14 +3,14 @@ package com.aoxing.mymvvm.model
 import androidx.recyclerview.widget.DiffUtil
 
 data class TopArticle(
-    var data: List<HomeArticle.Data> = listOf(),
+    var data: MutableList<HomeArticle.Data> = mutableListOf(),
     var errorCode: String = "",
     var errorMsg: String = ""
 )
 
 data class HomeArticle(
     var curPage: Int = 0,
-    var datas: List<Data> = listOf(),
+    var datas: MutableList<Data> = mutableListOf(),
     var offset: Int = 0,
     var over: Boolean = false,
     var pageCount: Int = 0,

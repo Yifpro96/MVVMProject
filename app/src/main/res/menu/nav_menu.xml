@@ -8,7 +8,7 @@
     <item
         android:id="@+id/page_2"
         android:icon="@mipmap/ic_sub"
-        android:title="@string/app_name" />
+        android:title="@string/square" />
     <item
         android:id="@+id/page_3"
         android:icon="@mipmap/ic_project"
