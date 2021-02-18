@@ -32,25 +32,26 @@
                 android:id="@+id/tvArticleTop"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
                 android:background="@drawable/bg_fresh"
                 android:text="@string/top_tip"
                 android:textColor="@color/red_200"
                 android:textSize="12dp"
                 android:visibility="@{article.top==1 ? View.VISIBLE : View.GONE}"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintBaseline_toBaselineOf="@id/tvData"
+                app:layout_constraintEnd_toStartOf="@id/tvArticleFresh"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
                 android:id="@+id/tvArticleFresh"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:background="@drawable/bg_fresh"
                 android:text="@string/new_fresh"
                 android:textColor="@color/red_200"
                 android:textSize="12dp"
                 android:visibility="@{article.fresh ? View.VISIBLE : View.GONE}"
-                app:layout_constraintBaseline_toBaselineOf="@id/tvArticleTop"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvData"
                 app:layout_constraintStart_toEndOf="@id/tvArticleTop" />
 
             <TextView
@@ -63,7 +64,7 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="12dp"
                 android:visibility="@{article.tags.empty ? View.GONE : View.VISIBLE}"
-                app:layout_constraintBaseline_toBaselineOf="@id/tvArticleTop"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvData"
                 app:layout_constraintStart_toEndOf="@id/tvArticleFresh" />
 
             <TextView
@@ -74,7 +75,7 @@
                 android:text="@{article.author.isEmpty() ? article.author : article.shareUser}"
                 android:textColor="@color/black"
                 android:textSize="12dp"
-                app:layout_constraintBaseline_toBaselineOf="@id/tvArticleTop"
+                app:layout_constraintBaseline_toBaselineOf="@id/tvData"
                 app:layout_constraintStart_toEndOf="@id/tvArticleTag" />
 
             <ImageView
@@ -125,8 +126,8 @@
                 android:text="@{article.niceDate}"
                 android:textColor="@color/black"
                 android:textSize="12dp"
-                app:layout_constraintBaseline_toBaselineOf="@id/tvAuthor"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </layout>

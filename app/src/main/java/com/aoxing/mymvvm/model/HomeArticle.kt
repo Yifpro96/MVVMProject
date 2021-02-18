@@ -15,7 +15,9 @@ data class HomeArticle(
     var over: Boolean = false,
     var pageCount: Int = 0,
     var size: Int = 0,
-    var total: Int = 0
+    var total: Int = 0,
+    var models: List<String> = listOf(),
+    var tips: List<String> = listOf()
 ) {
     data class Data(
         var top: Int = 0,

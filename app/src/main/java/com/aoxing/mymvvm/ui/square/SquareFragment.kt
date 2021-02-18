@@ -11,7 +11,6 @@ import com.aoxing.mymvvm.common.alert
 import com.aoxing.mymvvm.databinding.FragmentSquareBinding
 import com.aoxing.mymvvm.model.HomeArticle
 import com.aoxing.mymvvm.noMoreData
-import com.orhanobut.logger.Logger
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -26,16 +25,14 @@ class SquareFragment : BaseFragment(R.layout.fragment_square) {
 
     private val mBinding by binding<FragmentSquareBinding>()
     private val mViewModel by inject<SquareViewModel>()
-    private val mBannerAdapter by lazy {
-        BGABanner.Adapter<ImageView, String> { _, itemView, model, _ ->
-            itemView.load(model) {
-                crossfade(true)
-            }
-        }
-    }
     private val mSquareAdapter by lazy { SquareAdapter() }
     private var mCurPage = 0
     private lateinit var mBanner: BGABanner
+    private val mBannerAdapter = BGABanner.Adapter<ImageView, String> { _, itemView, model, _ ->
+        itemView.load(model) {
+            crossfade(true)
+        }
+    }
 
     override fun lazyLoad() {
         mBinding.run {
@@ -46,7 +43,7 @@ class SquareFragment : BaseFragment(R.layout.fragment_square) {
             lifecycleOwner = this@SquareFragment
             recyclerView.adapter = mSquareAdapter.apply {
                 headerView = View.inflate(context, R.layout.header_square_banner, null).apply {
-                    mBanner=findViewById(R.id.banner)
+                    mBanner = findViewById(R.id.banner)
                 }
             }
             viewModel = mViewModel.apply {

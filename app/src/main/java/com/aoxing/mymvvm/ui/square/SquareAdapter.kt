@@ -1,6 +1,9 @@
 package com.aoxing.mymvvm.ui.square
 
 import android.view.View
+import android.widget.ImageView
+import cn.bingoogolapple.bgabanner.BGABanner
+import coil.load
 import com.aoxing.mymvvm.R
 import com.aoxing.mymvvm.databinding.HeaderSquareBannerBinding
 import com.aoxing.mymvvm.databinding.ItemHomeArticleBinding
@@ -26,8 +29,6 @@ class SquareAdapter : DataBindingListAdapter<HomeArticle.Data>(HomeArticle.Data.
 }
 
 class SquareHeaderViewModel(view:View):DataBindingViewHolder<HomeArticle.Data>(view){
-
-    private val mBinding by viewHolderBinding<HeaderSquareBannerBinding>(view)
 
     override fun bindData(data: HomeArticle.Data, position: Int) {
     }
